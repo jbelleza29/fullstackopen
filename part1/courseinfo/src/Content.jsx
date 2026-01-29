@@ -1,11 +1,10 @@
 import React from 'react';
+import Part from './Part';
 
 const Content = ({ exercises }) => {
     return (
         exercises.map(exercise => (
-            <p key={exercise.part}>
-                {exercise.part} {exercise.exercises}
-            </p>
+            <Part key={exercise.part} part={exercise.part} exercises={exercise.exercises} />
         ))
     )
 }
